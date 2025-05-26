@@ -1205,9 +1205,23 @@
             updateStatsDisplay();
         });
 
-        // 통계 로드 (메모리에서)
+        // 통계 로드 (localStorage에서)
         function loadStats() {
-            // 메모리 기반이므로 별도 로드 작업 없음
+            const savedStats = localStorage.getItem('knouExamStats');
+            if (savedStats) {
+                examStats = JSON.parse(savedStats);
+            }
+            
+            const savedWrongAnswers = localStorage.getItem('knouWrongAnswers');
+            if (savedWrongAnswers) {
+                wrongAnswersHistory = JSON.parse(savedWrongAnswers);
+            }
+        }
+
+        // 통계 저장 (localStorage에)
+        function saveStats() {
+            localStorage.setItem('knouExamStats', JSON.stringify(examStats));
+            localStorage.setItem('knouWrongAnswers', JSON.stringify(wrongAnswersHistory));
         }
 
         // 통계 업데이트
@@ -1444,6 +1458,9 @@
 
             // 틀린 문제 저장
             saveWrongAnswers();
+
+            // 데이터 저장
+            saveStats();
 
             // 결과 화면 표시
             showResults(score, timeUsed);
@@ -1685,6 +1702,9 @@
                 
                 // 오답 히스토리 초기화
                 wrongAnswersHistory = [];
+                
+                // 데이터 저장
+                saveStats();
                 
                 updateStatsDisplay();
                 alert('데이터가 초기화되었습니다.');
