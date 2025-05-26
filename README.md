@@ -12,4 +12,4 @@
 - 학습 통계 관리
 
 ## 사용법  
-[배포된 URL] 접속 후 원하는 과목 선택!
+[https://mawoo-ui.github.io/html_javascript] 접속 후 원하는 과목 선택!
