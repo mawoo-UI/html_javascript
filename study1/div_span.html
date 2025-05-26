@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Page Title</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <style>
+    .red-bg{ background-color: lightcoral;}
+    .blue-bg{background-color: lightblue;}
+    .green-text{color: green;}
+    .highlight{background-color: rgb(242, 243, 181); font-weight: bold;}
+  </style>
+</head>
+<body>
+  <h1>DIV 와 SPAN 요소 연습</h1>  
+
+  <h2>DIV 요소(블록요소)</h2>
+  <div class="red-bg">
+    이것은 첫 번째 DIV 영역입니다. DIV는 블록 요소이므로 항상 새로운 줄에서 시작하고 전체 너비를 차지합니다.
+  </div>
+
+  <div class="blue-bg">
+    이것은 두 번째 DIV 영역입니다. 내용의 길이와 상관없이 항상 새로운 줄에서 시작됩니다.
+  </div>
+
+  <h2>SPAN 요소 (인라인 요소)</h2>
+  <p>
+    이 문장에서 <span class="green-text">이 부분</span>만 초록색으로 표시되고,
+    <span class="highlight">이 부분</span>은 배경이 노란색이며 굵게 표시됩니다.
+    SPAN은 인라인 요소이므로 줄바꿈 없이 텍스트 흐름 내에 존재합니다.
+  </p>
+
+  <h2>DIV와 SPAN 조합</h2>
+  <div class="blue-bg">
+    이 DIV 내에서 <span class="highlight">특정 텍스트만</span> 다르게 스타일을 적용할 수 있습니다.
+    인라인 요소는 블록 요소 안에 포함될 수 있습니다.
+  </div>
+
+
+</body>
+</html>

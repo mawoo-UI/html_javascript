@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Page Title</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+  <script src='main.js'></script>
+</head>
+<body>
+  <!-- 기본 진행률 -->
+  <p>
+    파일 업로드: 
+    <progress value="45" max="100">45%</progress>
+  </p>
+
+  <!-- 불확정 상태 (value 없음) -->
+  <p>
+    처리 중: 
+    <progress>로딩...</progress>
+  </p>
+
+  <!-- JavaScript 연동 예제 -->
+  <div>
+    <label for="file-progress">다운로드 진행률:</label>
+    <progress id="file-progress" value="0" max="100">0%</progress>
+    <span id="progress-text">0%</span>
+  </div>
+
+  <script>
+  let progress = 0;
+  const progressBar = document.getElementById('file-progress');
+  const progressText = document.getElementById('progress-text');
+
+  const interval = setInterval(() => {
+    progress += 10;
+    progressBar.value = progress;
+    progressText.textContent = progress + '%';
+    
+    if (progress >= 100) {
+      clearInterval(interval);
+    }
+  }, 500);
+  </script>
+  
+</body>
+</html>

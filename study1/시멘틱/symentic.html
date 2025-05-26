@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>시멘틱 완전정복</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <!-- 페이지 헤더 -->
+  <header>
+    <h1>웹 개발 블로그</h1>
+    <nav>
+      <ul>
+        <li><a href="">홈</a> </li>
+        <li><a href="/tutorials">튜토리얼</a> </li>
+        <li><a href="/about">소개</a> </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- 메인 콘텐츠 -->
+   <main>
+    <article>
+      <header>
+        <h2>HTML5 미디어 요소 활용법</h2>
+        <p>
+          작성일: <time datetime="2024-05-23"></time>
+        | 작성자 : 한주연
+        </p>
+      </header>
+
+      <section>
+        <h3>오디오 재생 예제</h3>
+        <audio controls>
+          <source src="example.mp3" type="audio/mp3">
+          <source src="example.ogg" type="audio/ogg">
+          브라우저가 오디오를 지원하지 않습니다.
+        </audio>
+      </section>
+
+      <section>
+        <h3>비디오 재생 예제</h3>
+        </figure>
+          <video controls width="600" poster="video-thumb.jpg">
+            <source src="tutorial.mp4" type="video/mp4">
+            <source src="tutorial.webm" type="video/webm">
+          </video>
+          <figcaption>그림 1. HTML5 비디오 요소 사용법</figcaption>
+        </figure>
+      </section>
+
+      <section>
+        <h3>진행률 표시</h3>
+        <p>
+          학습 진도:
+          <progress value="75" max="100">75%</progress>
+        </p>
+        <p>
+          이해도:
+          <meter value="4.5" max="5" optimum="5">4.5/5</meter>
+        </p>
+      </section>
+
+      <details>
+        <summary>추가 정보</summary>
+        <p>HTML5 미디어 요소는 다양한 브라우저에서 지원됩니다.</p>
+      </details>
+    </article>
+   </main>
+
+  <!-- 사이드 바 -->
+  <aside>
+    <section>
+      <h3>관련 글</h3>
+      <ul>
+        <li><a href="">CSS3 애니메이션</a></li>
+        <li><a href="">JavaScript ES6</a></li>
+      </ul>
+    </section>
+  </aside>
+
+  <!-- 페이지 푸터 -->
+  <footer>
+    <p>&copy; 2025 웹 개발 블로그. 모든 관리 보유.</p>
+  </footer>
+</body>
+</html>
