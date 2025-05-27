@@ -1420,6 +1420,174 @@
                     ],
                     correct: 3,
                     explanation: "Java의 패키지는 클래스들을 그룹화하고 네임스페이스를 제공하며 import로 사용합니다."
+                },
+                // 기존 java 문제 배열에 추가할 내용들:
+                {
+                    question: "Java 언어의 특징이 아닌 것은?",
+                    options: ["엄격한 자료형의 검사", "플랫폼에 독립적", "예외처리 기능의 지원", "멀티 스레딩의 지원"],
+                    correct: -1, // 모두 Java의 특징이므로 적절한 오답 선택지로 수정 필요
+                    explanation: "제시된 모든 항목이 Java의 특징입니다."
+                },
+                {
+                    question: "public class A { } class B { } 이 파일의 이름이 A.java일 때, 컴파일 결과는?",
+                    options: ["A.class만 생성된다", "B.class만 생성된다", "A.class와 B.class가 생성된다", "오류가 있어 컴파일되지 않는다"],
+                    correct: 2,
+                    explanation: "각 클래스마다 별도의 .class 파일이 생성됩니다."
+                },
+                {
+                    question: "다음 중 클래스 이름에 해당하지 않는 것은?",
+                    options: ["Integer", "String", "System", "boolean"],
+                    correct: 3,
+                    explanation: "boolean은 기본 데이터 타입이며 클래스 이름이 아닙니다."
+                },
+                {
+                    question: "다음 정수 리터럴 중 값이 다른 하나는?",
+                    options: ["10", "00001010", "0x0A", "0b0000_1010"],
+                    correct: 1,
+                    explanation: "00001010은 8진수로 520을 의미하며, 나머지는 모두 10진수 10입니다."
+                },
+                {
+                    question: "다음 중 문법적으로 올바른 배열 선언은?",
+                    options: ["int a[10] = new int[ ];", "int b[ ] = new int(10);", "int[ ][ ] c = new int[5][ ];", "int[5] d = {1, 2, 3, 4, 5};"],
+                    correct: 2,
+                    explanation: "다차원 배열에서 첫 번째 차원의 크기는 반드시 지정해야 합니다."
+                },
+                {
+                    question: "int형 변수 i와 j의 값을 공백으로 구분하여 출력하는 올바른 방법은?",
+                    options: ["System.out.println( i , j );", "System.out.println( i + \" \" + j );", "System.out.println( i + j );", "System.out.println( i + '=' + j );"],
+                    correct: 1,
+                    explanation: "문자열 연결 연산자(+)를 사용하여 공백(\" \")을 중간에 넣어 출력합니다."
+                },
+                {
+                    question: "제네릭 클래스 Data<T>가 있을 때, 문법적으로 오류가 있는 것은?",
+                    options: ["Data<int> d = new Data<>();", "Data<Integer> d = new Data<>();", "Data<String> d = new Data<String>();", "Data d = new Data();"],
+                    correct: 0,
+                    explanation: "제네릭에서는 기본 타입(primitive type)을 사용할 수 없고, 래퍼 클래스를 사용해야 합니다."
+                },
+                {
+                    question: "인터페이스 Addable { int add(int a, int b); }에서 람다식 사용이 잘못된 것은?",
+                    options: ["(int a, int b) -> { return (a + b); }", "(int a, int b) -> a + b", "(a, b) -> return (a + b)", "(a, b) -> (a + b)"],
+                    correct: 2,
+                    explanation: "람다식에서 중괄호 없이 return 키워드를 사용할 수 없습니다."
+                },
+                {
+                    question: "Client 클래스를 myprogram.game 패키지에 위치시키려면 소스 파일 맨 위에 무엇을 작성해야 하는가?",
+                    options: ["package myprogram.game;", "package myprogram.game.Client;", "import myprogram.game;", "import myprogram.game.Client;"],
+                    correct: 0,
+                    explanation: "패키지 선언은 'package 패키지명;' 형태로 작성합니다."
+                },
+                {
+                    question: "Object 클래스와 String 클래스에 대한 설명 중 잘못된 것은?",
+                    options: [
+                        "모든 클래스는 묵시적으로 Object 클래스를 상속받는다",
+                        "Object 클래스에 toString()과 equals() 메소드가 정의되어 있다",
+                        "String 클래스에 toString()과 equals() 메소드가 재정의되어 있다",
+                        "String 클래스는 표준 입출력 스트림을 위한 static 필드를 제공한다"
+                    ],
+                    correct: 3,
+                    explanation: "표준 입출력 스트림은 System 클래스에서 제공합니다."
+                },
+                {
+                    question: "다음 중 기본 스트림에 해당하지 않는 것은?",
+                    options: ["StringReader", "FileReader", "ByteArrayInputStream", "BufferedReader"],
+                    correct: 3,
+                    explanation: "BufferedReader는 보조 스트림(보조 클래스)입니다."
+                },
+                {
+                    question: "BufferedReader 클래스에 관한 설명으로 틀린 것은?",
+                    options: [
+                        "Reader의 자식 클래스이다",
+                        "read()와 readLine() 등 다양한 입력 메소드를 제공한다",
+                        "바이트 단위의 입력 기능을 제공한다",
+                        "입력 과정에 버퍼링 기능을 제공한다"
+                    ],
+                    correct: 2,
+                    explanation: "BufferedReader는 문자 단위 입력을 제공하며, 바이트 단위는 InputStream 계열에서 제공합니다."
+                },
+                {
+                    question: "Path 인터페이스에 관한 설명 중 잘못된 것은?",
+                    options: [
+                        "java.io.File 클래스를 대체할 수 있다",
+                        "파일시스템에 존재하는 파일 또는 디렉터리의 경로를 표현한다",
+                        "경로의 생성, 경로의 조작/비교, 경로의 요소를 조회하는 기능을 제공한다",
+                        "파일 내용의 읽기와 쓰기 기능을 제공한다"
+                    ],
+                    correct: 3,
+                    explanation: "Path는 경로 정보만 다루며, 파일 읽기/쓰기는 Files 클래스나 다른 IO 클래스를 사용합니다."
+                },
+                {
+                    question: "FileChannel 클래스에 관한 설명으로 틀린 것은?",
+                    options: [
+                        "java.io 패키지의 파일 관련 스트림 클래스를 대체하기 위한 클래스이다",
+                        "FileChannel.open(path)으로 객체 생성을 하면 해당 파일을 읽기용으로 열게 된다",
+                        "파일 입력을 위해 FileChannelReader, 파일 출력을 위해 FileChannelWriter를 사용한다",
+                        "멀티 스레드 환경에서도 안전하게 사용할 수 있게 설계되었다"
+                    ],
+                    correct: 2,
+                    explanation: "FileChannel은 직접 read/write 메소드를 제공하며, 별도의 Reader/Writer 클래스를 사용하지 않습니다."
+                },
+                {
+                    question: "ArrayList 클래스에 관한 설명으로 적당하지 않은 것은?",
+                    options: [
+                        "List 인터페이스를 구현한 클래스이다",
+                        "여러 원소를 저장하기 위해 내부적으로 배열을 사용한다",
+                        "원소의 순서가 의미를 가진다",
+                        "같은 자료를 중복으로 저장할 수 없다"
+                    ],
+                    correct: 3,
+                    explanation: "ArrayList는 중복된 요소를 저장할 수 있습니다."
+                },
+                {
+                    question: "(key, value) 형태의 원소로 구성되는 자료 묶음을 다루기 위한 인터페이스나 클래스가 아닌 것은?",
+                    options: ["HashMap", "HashSet", "Hashtable", "Map"],
+                    correct: 1,
+                    explanation: "HashSet은 Set 인터페이스를 구현하며 단일 값만 저장합니다."
+                },
+                {
+                    question: "주어진 배열을 스트림으로 만들 때 사용하는 올바른 방법은?",
+                    options: ["IntStream.range(numbers)", "Arrays.stream(numbers)", "numbers.stream()", "numbers.getStream()"],
+                    correct: 1,
+                    explanation: "Arrays.stream() 메소드를 사용하여 배열을 스트림으로 변환합니다."
+                },
+                {
+                    question: "스레드 동기화의 의미를 가장 잘 설명한 것은?",
+                    options: [
+                        "메인 스레드가 가장 마지막에 종료되는 것을 보장하는 것",
+                        "공유 객체에 여러 스레드들이 동시 접근할 수 있게 하는 것",
+                        "한순간에 한 스레드만 공유 객체에 접근할 수 있게 하는 것",
+                        "여러 개의 스레드들이 순서대로 하나씩 수행되게 하는 것"
+                    ],
+                    correct: 2,
+                    explanation: "스레드 동기화는 공유 자원에 대한 동시 접근을 제어하는 것입니다."
+                },
+                {
+                    question: "JDBC 프로그래밍에 사용되는 클래스나 인터페이스가 아닌 것은?",
+                    options: ["Connection", "DriverManager", "Statement", "Runnable"],
+                    correct: 3,
+                    explanation: "Runnable은 스레드 관련 인터페이스이며 JDBC와는 관련이 없습니다."
+                },
+                {
+                    question: "PreparedStatement 객체에 대한 설명으로 잘못된 것은?",
+                    options: [
+                        "PreparedStatement는 Statement의 부모 인터페이스이다",
+                        "객체를 생성할 때 SQL 구문을 지정해야 한다",
+                        "같은 SQL 구문을 여러 번 실행할 때 효율적으로 활용될 수 있다",
+                        "매개 변수를 가지는 SQL 구문을 저장할 수 있다"
+                    ],
+                    correct: 0,
+                    explanation: "PreparedStatement는 Statement의 하위 인터페이스입니다."
+                },
+                {
+                    question: ".jar 파일 형식으로 배포된 라이브러리를 사용하고자 할 때, 이러한 .jar 파일을 어떤 환경 변수에 추가해야 하는가?",
+                    options: ["Classpath", "Modulepath", "Javadoc", "Jarpath"],
+                    correct: 0,
+                    explanation: "jar 파일은 Classpath 환경 변수에 추가해야 합니다."
+                },
+                {
+                    question: "Java의 표준 모듈 중 requires 키워드로 사용 선언을 하지 않아도 사용이 가능한 모듈은?",
+                    options: ["jdk.base", "jdk.lang", "java.lang", "java.base"],
+                    correct: 3,
+                    explanation: "java.base 모듈은 모든 Java 애플리케이션에서 자동으로 사용됩니다."
                 }
             ]
         };
